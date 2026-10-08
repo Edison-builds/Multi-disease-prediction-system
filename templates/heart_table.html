@@ -1,0 +1,44 @@
+{%extends 'tem_base.html'%} 
+{%block content%}
+<form style="margin-left: 650px;" action="" method="POST" enctype="multipart/form-data">
+    <label>Upload you file</label>
+    <input type="file" name="csv_file" id="" required>
+    <button class="btn btn-primary" type="submit"><a href="{% url 'heart_data' %}">Upload</a></button>
+</form>
+<br>
+<table style="color: black;" class="table">
+    <tdead>
+        <tr>
+            <th>Age</th>
+            <th>Sex</th>
+            <th>Constrictive pericarditis</th>
+            <th>Blood Pressure</th>
+            <th>Chol</th>
+            <th>Fbs</th>
+            <th>Restecg</th>
+            <th>tdalach</th>
+            <th>Exang</th>
+            <th>Oldpeak</th>
+            <th>Slope</th>
+        </tr>
+    </tdead>
+    <tbody>
+        {% for i in data %}
+        <tr>
+            <td>{{i.age}}</td>
+            <td>{{i.sex}}</td>
+            <td>{{i.cp}}</td>
+            <td>{{i.trestbps}}</td>
+            <td>{{i.chol}}</td>
+            <td>{{i.fbs}}</td>
+            <td>{{i.restecg}}</td>
+            <td>{{i.tdalach}}</td>
+            <td>{{i.exang}}</td>
+            <td>{{i.oldpeak}}</td>
+            <td>{{i.slope}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

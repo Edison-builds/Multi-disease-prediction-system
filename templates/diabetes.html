@@ -1,0 +1,31 @@
+{%extends 'tem1_base.html'%}
+{% load static %}
+{%block content%}
+
+
+<div style="color: black;" class="container">
+    <div class="display-4 my-2 text-center">Diabetes Disease Prediction</div>
+    <hr />
+    {% if result %}
+    <div class="h1 my-2 text-center">
+        You {{ result }} diabetes disease.
+    </div>
+    {% endif %}
+    <div class="row">
+        <div class="col-md-6">
+            <img height="80%" width="100%" src="{% static 'diabetes.jpg' %}" alt="">
+        </div>
+    <div class="col-md-6">
+        <form class="" method="POST" action="{% url 'diabetes' %}">
+            {% csrf_token %}
+            {{form}}
+            <div class="mt-4">
+                <button type="submit" class="btn-lg btn-block btn btn-outline-danger mb-5">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+{% endblock %}

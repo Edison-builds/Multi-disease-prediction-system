@@ -1,0 +1,35 @@
+{%extends 'tem_base.html'%} 
+{%block content%}
+<form style="margin-left: 650px;" action="" method="POST" enctype="multipart/form-data">
+    <label>Upload you file</label>
+    <input type="file" name="csv_file" id="" required>
+    <button class="btn btn-primary" type="submit"><a href="{% url 'diabetes_data' %}">Upload</a></button>
+</form>
+<br>
+<table style="color: black;" class="table">
+    <tdead>
+        <tr>
+            <th>Glucose</th>
+            <th>BloodPressure</th>
+            <th>SkinThickness</th>
+            <th>Insulin</th>
+            <th>BMI</th>
+            <th>DiabetesPedigreeFunction</th>
+            <th>Age</th>
+        </tr>
+    </tdead>
+    <tbody>
+        {% for i in data %}
+        <tr>
+            <td>{{i.Glucose}}</td>
+            <td>{{i.BloodPressure}}</td>
+            <td>{{i.SkinThickness}}</td>
+            <td>{{i.Insulin}}</td>
+            <td>{{i.BMI}}</td>
+            <td>{{i.DiabetesPedigreeFunction}}</td>
+            <td>{{i.Age}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

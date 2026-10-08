@@ -1,0 +1,30 @@
+{%extends 'tem1_base.html'%}
+{% load static %}
+{%block content%}
+<div style="color: black;" class="container">
+  <div class="display-4 my-2 text-center">Breast Cancer Prediction</div>
+  <hr />
+  {% if result %}
+  <div class="h1 my-2 text-center">
+    You {{ result }} breast cancer.
+  </div>
+  {% endif %}
+  <div class="row">
+    <div class="col-md-1"></div>
+  <div class="col-md-5">
+    <form class="" method="POST" action="{% url 'breast' %}">
+      {% csrf_token %}
+      {{form}}
+      <div class="mt-4">
+        <button type="submit" class="btn-lg btn-block btn btn-outline-danger mb-5">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-6">
+    <img height="80%" width="100%" src="{% static '9573115.png' %}" alt="">
+  </div>
+</div>
+</div>
+{%endblock%}

@@ -1,0 +1,100 @@
+{%extends 'tem1_base.html'%}
+{%block content%}
+<div style="color: black;" class="container">
+    <div class="display-4 my-2 text-center">Heart Disease Prediction</div>
+    <hr />
+    {% if context %}
+    <div class="h1 my-2 text-center">
+        You {{ context }} heart disease.
+    </div>
+    {{a}}
+    {% endif %} 
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <form style="color: black;" class="" method="POST" action="{% url 'heart' %}">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Age</label>
+                        {{form.age}}
+                    </div>
+                    <div class="col-md-6">
+                        <label>Sex</label>
+                        {{form.sex}}
+                    </div>
+                </div>
+                 <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Constrictive pericarditis</label>
+                        {{form.cp}}
+                    </div>
+                    <div class="col-md-6">
+                        <label>Blood Pressure</label>
+                        {{form.trestbps}}
+                    </div>
+                </div>
+                 <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Chol</label>
+                        {{form.chol}}
+                    </div>
+                    <div class="col-md-6">
+                        <label>Oldpeak</label>
+                        {{form.oldpeak}}
+                    </div>
+                </div>
+                 <br>
+                <div class="row">
+    
+    
+                    <div class="col-md-6">
+                        <label>Fasting Blood Sugar</label>
+                        {{form.fbs}}
+                    </div>
+                    <div class="col-md-6">
+                        <label>Restecg</label>
+                        {{form.restecg}}
+                    </div>
+                </div>
+                 <br>
+                <div class="row">
+    
+                    <div class="col-md-6">
+                        <label>Thalach</label>
+                        {{form.thalach}}
+                    </div>
+                    <div class="col-md-6">
+                        <label>Exang</label>
+                        {{form.exang}}
+                    </div>
+                </div>
+                 <br>
+                <div class="row">
+    
+                    <div class="col-md-4">
+                        <label>Slope</label>
+                        {{form.slope}}
+                    </div>
+                    <div class="col-md-4">
+                        <label>CA</label>
+                        {{form.ca}}
+                    </div>
+                    <div class="col-md-4">
+                        <label>Thal</label>
+                        {{form.thal}}
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <button type="submit" class="btn-lg btn-block btn btn-outline-danger mb-5">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

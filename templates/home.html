@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Reveal Bootstrap Template</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'tem/lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'tem/lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'tem/lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'tem/lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'tem/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'tem/lib/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
+  <link href="{% static 'tem/lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'tem/css/style.css' %}" rel="stylesheet">
+</head>
+<body id="body">
+  <header id="header">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <h1><a href="#body" class="scrollto">Disease <span>Predictor</span></a></h1>
+      </div>
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="{% url 'heart' %}">Heart Disease</a></li>
+          <li><a href="{% url 'diabetes' %}">Diabetes Disease</a></li>
+          <li><a href="{% url 'breast' %}">Breast Cancer</a></li>
+          <li><a href="{% url 'log_in' %}">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section id="intro">
+    <div class="intro-content">
+      <h2>Multi Disease <span>Prediction</span><br></h2>
+      <div>
+        <a href="{% url 'heart' %}" class="btn-get-started scrollto">Predictor</a>
+        <a href="#" class="btn-projects scrollto">Predict own</a>
+      </div>
+    </div>
+    <div id="intro-carousel" class="owl-carousel" >
+      <div class="item" style="background-image: url('img/intro-carousel/1.jpg');"></div>
+      <div class="item" style="background-image: url('img/intro-carousel/2.jpg');"></div>
+      <div class="item" style="background-image: url('img/intro-carousel/3.jpg');"></div>
+      <div class="item" style="background-image: url('img/intro-carousel/4.jpg');"></div>
+      <div class="item" style="background-image: url('img/intro-carousel/5.jpg');"></div>
+    </div>
+  </section>
+  <main id="main">
+    <section id="about" class="wow fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 about-img">
+            <img src="{% static 'ML.jpg' %}" alt="">
+          </div>
+          <div class="col-lg-6 content">
+            <br><br><br>
+            <h2>Machine Learning</h2>
+            <h3>Machine learning (ML) is a subset of artificial intelligence (AI) that allows computers to learn and improve without direct instruction.</h3>
+            <ul>
+              <li><i class="ion-android-checkmark-circle"></i> Supervised Learning</li>
+              <li><i class="ion-android-checkmark-circle"></i> Unsupervised Learning</li>
+              <li><i class="ion-android-checkmark-circle"></i> Reinforcement Learning</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Algorithms</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft">
+              <div class="icon"><i class="fa fa-bar-chart"></i></div>
+              <h4 class="title"><a href="">Logistic regression</a></h4>
+              <p class="description">Logistic regression is a supervised machine learning algorithm widely used for binary classification tasks, such as identifying whether an email is spam or not and diagnosing diseases by assessing the presence or absence of specific conditions based on patient test results.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight">
+              <div class="icon"><i class="fa fa-picture-o"></i></div>
+              <h4 class="title"><a href="">K-Nearest Neighbors</a></h4>
+              <p class="description">The k-nearest neighbors (KNN) algorithm is a non-parametric, supervised learning classifier, which uses proximity to make classifications or predictions about the grouping of an individual data point. <br><br><br> </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa fa-shopping-bag"></i></div>
+              <h4 class="title"><a href="">SVM</a></h4>
+              <p class="description">A support vector machine (SVM) is a supervised machine learning algorithm that classifies data by finding an optimal line or hyperplane that maximizes the distance between each class in an N-dimensional space. <br><br></p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa fa-map"></i></div>
+              <h4 class="title"><a href="">Random Forest</a></h4>
+              <p class="description">Random forest is a commonly-used machine learning algorithm, trademarked by Leo Breiman and Adele Cutler, that combines the output of multiple decision trees to reach a single result.Its ease of use and flexibility have fueled its adoption, as it handles both classification and regression problems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        Disease Predictor
+      </div>
+      <div class="credits">
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <script src="{% static 'tem/lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'tem/lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'tem/lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'tem/lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'tem/lib/superfish/hoverIntent.js' %}"></script>
+  <script src="{% static 'tem/lib/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'tem/lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'tem/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'tem/lib/magnific-popup/magnific-popup.min.js' %}"></script>
+  <script src="{% static 'tem/lib/sticky/sticky.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+  <script src="{% static 'tem/js/main.js' %}"></script>
+</body>
+</html>

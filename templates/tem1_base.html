@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Heart Diseace prediction</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'template/images/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'template/vendor/owl-carousel/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'template/vendor/owl-carousel/css/owl.theme.default.min.css' %}">
+    <link href="{% static 'template/vendor/jqvmap/css/jqvmap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'template/css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <div id="main-wrapper">
+        <div class="nav-header">
+            <a href="index.html" class="brand-logo">
+                <img class="logo-abbr" src="./images/logo.png" alt="">
+                <img class="logo-compact" src="./images/logo-text.png" alt="">
+                <img class="brand-title" src="./images/logo-text.png" alt="">
+            </a>
+
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="header-content">
+                <nav class="navbar navbar-expand">
+                   <h3 style="margin-left: 400px;">Multi Disease Prediction</h3>
+                </nav>
+            </div>
+        </div>
+        <div class="quixnav">
+            <div class="quixnav-scroll">
+
+                <ul class="metismenu" id="menu">
+                    <li class="nav-label">Predictions</li>
+                    <li><a class="has-arrow" href="{% url 'heart' %}" aria-expanded="false"><i
+                                class="icon icon-world-2"></i><span class="nav-text">Heart Disease Prediction</span></a>
+                    </li>
+                    <li><a class="has-arrow" href="{% url 'diabetes' %}" aria-expanded="false"><i
+                                class="icon icon-plug"></i><span class="nav-text">Diabetes Prediction</span></a>
+                    </li>
+                    <li><a href="{% url 'breast' %}" aria-expanded="false"><i class="icon icon-globe-2"></i><span
+                                class="nav-text">Breast Cancer</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content-body">
+            <div>
+                <div class="row">
+                    <div class="col-lg-12">
+                            {% block content %}
+                            {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'template/vendor/global/global.min.js'%}"></script>
+    <script src="{% static 'template/js/quixnav-init.js'%}"></script>
+    <script src="{% static 'template/js/custom.min.js'%}"></script>
+    <script src="{% static 'template/vendor/raphael/raphael.min.js'%}"></script>
+    <script src="{% static 'template/vendor/morris/morris.min.js'%}"></script>
+    <script src="{% static 'template/vendor/circle-progress/circle-progress.min.js'%}"></script>
+    <script src="{% static 'template/vendor/chart.js/Chart.bundle.min.js'%}"></script>
+    <script src="{% static 'template/vendor/gaugeJS/dist/gauge.min.js'%}"></script>
+    <script src="{% static 'template/vendor/flot/jquery.flot.js'%}"></script>
+    <script src="{% static 'template/vendor/flot/jquery.flot.resize.js'%}"></script>
+    <script src="{% static 'template/vendor/owl-carousel/js/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'template/vendor/jqvmap/js/jquery.vmap.min.js'%}"></script>
+    <script src="{% static 'template/vendor/jqvmap/js/jquery.vmap.usa.js'%}"></script>
+    <script src="{% static 'template/vendor/jquery.counterup/jquery.counterup.min.js'%}"></script>
+    <script src="{% static 'template/js/dashboard/dashboard-1.js'%}"></script>
+</body>
+</html>
